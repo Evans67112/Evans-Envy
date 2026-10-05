@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tiapo Evans | HND Study & Wellbeing Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f6f5;--card:#fff;--ink:#12211f;--mute:#4d6360;--pri:#14746f;--pri-ink:#fff;--acc:#f2b134;--soft:#dcebe7;--line:#cfdcd9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a19;--card:#152624;--ink:#e8f1ef;--mute:#9bb3af;--pri:#4fc1b9;--pri-ink:#0b1514;--acc:#f2b134;--soft:#1d3532;--line:#27413d}}
+:root[data-theme="dark"]{--bg:#0e1a19;--card:#152624;--ink:#e8f1ef;--mute:#9bb3af;--pri:#4fc1b9;--pri-ink:#0b1514;--acc:#f2b134;--soft:#1d3532;--line:#27413d}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(64px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--pri)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:6px;align-items:center;padding:10px 16px;overflow-x:auto;white-space:nowrap}
+nav b{font:800 18px 'Bricolage Grotesque',sans-serif;margin-right:8px}
+nav a{text-decoration:none;color:var(--mute);padding:6px 12px;border-radius:99px;font-weight:600;font-size:14px}
+nav a:hover{background:var(--soft);color:var(--ink)}
+nav button{margin-left:auto}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px}
+.hero{padding:56px 0 40px}
+.hero h1{font-size:clamp(46px,13vw,104px);font-weight:800;letter-spacing:-.03em}
+.hero h1 span{display:block;color:var(--pri)}
+.hero p{max-width:56ch;font-size:19px;color:var(--mute);margin:18px 0 26px}
+.btn{display:inline-block;background:var(--pri);color:var(--pri-ink);border:0;border-radius:10px;padding:12px 20px;font:600 16px Figtree,sans-serif;text-decoration:none;cursor:pointer}
+.btn.alt{background:var(--soft);color:var(--ink)}
+.ghost{background:none;border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:5px 12px;cursor:pointer;font:600 13px Figtree,sans-serif}
+section{padding:44px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(28px,6vw,40px);margin-bottom:8px}
+.lead{color:var(--mute);max-width:60ch;margin:0 0 24px}
+.tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.tabs button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:10px 16px;border-radius:10px;font:600 15px Figtree,sans-serif;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--pri);color:var(--pri-ink);border-color:var(--pri)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.panel[hidden]{display:none}
+.panel h3{font-size:24px;margin-bottom:4px}
+.panel .goal{color:var(--mute);margin:0 0 14px}
+ul{padding-left:20px;margin:8px 0}
+li{margin:6px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.box h3{font-size:19px;margin-bottom:6px}
+.box.hl{border-left:6px solid var(--acc)}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:0 16px}
+summary{cursor:pointer;font:700 17px 'Bricolage Grotesque',sans-serif;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::after{content:"+";color:var(--pri);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details>div{padding-bottom:14px}
+.timer{display:flex;flex-wrap:wrap;gap:18px;align-items:center;background:var(--pri);color:var(--pri-ink);border-radius:16px;padding:22px}
+.timer output{font:800 56px 'Bricolage Grotesque',sans-serif;min-width:3.4ch}
+.timer .btn{background:var(--acc);color:#1b1500}
+.timer .btn.alt{background:rgba(255,255,255,.2);color:inherit}
+.check label{display:flex;gap:10px;align-items:flex-start;margin:8px 0;cursor:pointer}
+.check input{width:20px;height:20px;margin-top:3px;accent-color:var(--pri)}
+.warn{background:var(--soft);border-radius:12px;padding:16px;margin-top:20px}
+footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+.table{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:460px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;font-size:15px}
+th{background:var(--soft)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="Main">
+<b>Tiapo Evans</b>
+<a href="#years">3-Year Plan</a><a href="#study">Study</a><a href="#level1">Level 1</a><a href="#careers">Careers</a><a href="#health">Health</a><a href="#mind">Mind</a><a href="#life">Life</a><a href="#save">Savings</a><a href="#plan">Life Plan</a><a href="#mature">Maturity</a><a href="#faith">Faith</a><a href="#tools">Tools</a>
+<button class="ghost" id="theme" aria-label="Toggle theme">Theme</button>
+</nav>
+
+<header class="wrap hero">
+<h1>Tiapo<span>Evans</span></h1>
+<p>A practical guide for a Cameroonian student doing a 3-year HND in Cyber Security: how to study, plan each year, build a career, and stay healthy enough to finish strong.</p>
+<a class="btn" href="#years">See the 3-year plan</a> <a class="btn alt" href="#tools">Start a focus timer</a>
+</header>
+
+<section id="years"><div class="wrap">
+<h2>Your 3-year HND roadmap</h2>
+<p class="lead">Each year has a different job. Know which year you are in and spend your energy on the right things.</p>
+<div class="tabs" role="tablist">
+<button role="tab" aria-selected="true" data-p="y1">Year 1</button>
+<button role="tab" aria-selected="false" data-p="y2">Year 2</button>
+<button role="tab" aria-selected="false" data-p="y3">Year 3</button>
+</div>
+<div class="panel" id="y1">
+<h3>Year 1: Build the foundation</h3>
+<p class="goal">Goal: learn how to learn, and never fall behind on the basics.</p>
+<ul>
+<li>Get the course outline for every module in week one. Turn each into a list of topics and tick them off.</li>
+<li>Attend every lecture and practical. Missed classes are the biggest early cause of failure.</li>
+<li>Set a fixed study routine: 2 hours of self-study for every hour of class, spread across the week.</li>
+<li>Review notes within 24 hours of each class. Rewrite them in your own words.</li>
+<li>Learn how your school grades: coursework, tests and exams, and the pass mark and GPA/credit rules.</li>
+<li>Join one study group of 3 to 5 serious people. Meet weekly.</li>
+<li>Find your lecturers' office hours and ask questions early, not before exams.</li>
+<li>Build habits now: sleep, meals, exercise, a weekly plan. These carry you through Years 2 and 3.</li>
+</ul>
+</div>
+<div class="panel" id="y2" hidden>
+<h3>Year 2: Go deeper and get practical</h3>
+<p class="goal">Goal: master your core subjects and gain real skills employers can see.</p>
+<ul>
+<li>Use past questions from at least the last 5 years for each course. Spot repeating patterns.</li>
+<li>Move from reading to doing: solve problems, build projects, write reports, practise on real tools.</li>
+<li>Look for industrial attachment or placement early. Apply, prepare your CV, and ask lecturers for contacts.</li>
+<li>Keep a logbook or portfolio of work done. It becomes proof for jobs and your final year write-up.</li>
+<li>Start choosing a direction: job, business, or further study (such as a degree top-up).</li>
+<li>Learn one extra skill: Excel, presentation, writing, coding, design, or a professional certificate related to your field.</li>
+<li>Start networking: LinkedIn profile, alumni, professional associations.</li>
+<li>Check your results every semester and fix weak courses straight away. Do not carry them to Year 3.</li>
+</ul>
+</div>
+<div class="panel" id="y3" hidden>
+<h3>Year 3: Finish with distinction</h3>
+<p class="goal">Goal: a strong final project, strong final grades, and a clear next step.</p>
+<ul>
+<li>Choose your project topic early. Pick something you can finish, with a supervisor who responds.</li>
+<li>Work backwards from the deadline: topic, literature, method, data, draft, edit, submit. Put dates on each step.</li>
+<li>Send your supervisor a short update every 2 weeks and book feedback on drafts well before the deadline.</li>
+<li>Back up your project in two places (phone/laptop and cloud). Name files with the date.</li>
+<li>Start final exam revision 10 to 12 weeks before exams using a written timetable.</li>
+<li>Do at least one full timed past paper per course, then mark it honestly.</li>
+<li>Prepare your CV, cover letter, and interview answers before you graduate. Apply while still in school.</li>
+<li>Protect your health in exam season. Sleep and meals matter more than extra all-nighters.</li>
+</ul>
+</div>
+</div></section>
+
+<section id="study"><div class="wrap">
+<h2>Study strategies that work</h2>
+<p class="lead">Methods backed by learning research. Tap each one to open it.</p>
+<details open><summary>Active recall</summary><div>Close the book and write or say everything you remember. Then check what you missed. This is harder than re-reading and works far better. Use flashcards, practice questions, and explaining topics out loud.</div></details>
+<details><summary>Spaced repetition</summary><div>Review a topic after 1 day, 3 days, 1 week, 2 weeks, then 1 month. Short repeated reviews beat one long cram. Apps like Anki can schedule this for you.</div></details>
+<details><summary>Pomodoro focus blocks</summary><div>Study 25 minutes, rest 5 minutes. After 4 rounds, take 20 to 30 minutes. Phone out of sight. Try the timer in the Tools section below.</div></details>
+<details><summary>Feynman technique</summary><div>Explain a topic in simple words as if teaching a younger student. Wherever you get stuck, that is the gap. Go back, learn it, explain again.</div></details>
+<details><summary>Note-taking: Cornell method</summary><div>Divide the page: notes on the right, keywords and questions on the left, a short summary at the bottom. Cover the notes and answer the questions to revise.</div></details>
+<details><summary>Past questions and mock exams</summary><div>Do papers under real time limits, without notes. Mark yourself against the marking scheme. Keep an "error list" of mistakes and review it before every exam.</div></details>
+<details><summary>Group study the right way</summary><div>Each person prepares a topic and teaches it. Quiz each other. Keep sessions to 60 to 90 minutes with an agenda, otherwise it turns into chatting.</div></details>
+<details><summary>Writing assignments and reports</summary><div>Read the brief and marking criteria first. Plan an outline, write a rough draft, then edit. Reference properly and never copy: plagiarism can cost you the course. Submit a day early.</div></details>
+
+<h3 style="margin:30px 0 12px;font-size:22px">Daily study rhythm</h3>
+<p class="lead" style="margin-bottom:0">Class in the morning, review in the afternoon, short revision in the evening, fixed bedtime. The full Level 1 timetable is in the next section.</p>
+</div></section>
+
+<section id="level1"><div class="wrap">
+<h2>Level 1 Cyber Security: courses and weekly timetable</h2>
+<p class="lead">A sample 7-day timetable for the typical first-year courses. Your school's real timetable and course list may differ, so use this as a study plan and adjust it to your classes.</p>
+<div class="grid" style="margin-bottom:22px">
+<div class="box"><h3>Core Level 1 courses</h3><ul>
+<li><b>Introduction to Cyber Security</b>: threats, attacks, CIA triad, ethics and law</li>
+<li><b>Computer Systems and Hardware</b></li>
+<li><b>Networking Fundamentals</b>: IP addressing, TCP/IP, routers, switches</li>
+<li><b>Operating Systems</b>: Windows and Linux command line</li>
+<li><b>Programming Fundamentals</b>: Python basics</li>
+<li><b>Mathematics for Computing</b>: logic, binary, discrete maths</li>
+<li><b>Databases and Web Basics</b>: SQL, HTML</li>
+<li><b>Communication Skills</b>: report writing, English and French</li>
+</ul></div>
+<div class="box hl"><h3>Tips for Level 1</h3><ul>
+<li>Practise Linux and Python daily, even 30 minutes.</li>
+<li>Build a free home lab with VirtualBox and a Linux virtual machine.</li>
+<li>Learn only on your own systems or approved labs. Hacking others without permission is illegal.</li>
+<li>Download notes and videos when you have data or Wi-Fi, so you can study during network or power cuts.</li>
+</ul></div>
+</div>
+<div class="table"><table>
+<tr><th>Day</th><th>Morning</th><th>Afternoon</th><th>Evening</th></tr>
+<tr><td>Monday</td><td>8-10 Intro to Cyber Security<br>10-12 Networking Fundamentals</td><td>Review notes, summarise both lectures</td><td>1 hr Networking practice (IP, subnetting)</td></tr>
+<tr><td>Tuesday</td><td>8-10 Operating Systems<br>10-12 Programming (Python)</td><td>Python exercises, 2 hr</td><td>Linux commands, 1 hr</td></tr>
+<tr><td>Wednesday</td><td>8-10 Maths for Computing<br>10-12 Computer Systems</td><td>Maths problems, 2 hr</td><td>Flashcards: hardware terms</td></tr>
+<tr><td>Thursday</td><td>8-10 Databases and Web<br>10-12 Networking lab</td><td>SQL and HTML practice, 2 hr</td><td>Lab write-up</td></tr>
+<tr><td>Friday</td><td>8-10 Communication Skills<br>10-12 OS lab (Linux)</td><td>Group study: quiz each other</td><td>Light revision, early rest</td></tr>
+<tr><td>Saturday</td><td>Exercise, chores</td><td>3 hr home lab or assignments</td><td>Social time, rest</td></tr>
+<tr><td>Sunday</td><td>Rest, church or family time</td><td>Weekly review (1 hr): what did I miss?</td><td>Plan next week; sleep early</td></tr>
+</table></div>
+</div></section>
+
+<section id="careers"><div class="wrap">
+<h2>Careers in cyber security</h2>
+<p class="lead">Cyber security jobs are growing in banks, mobile money and telecom companies, government, and international organisations in Cameroon and abroad.</p>
+<div class="grid">
+<div class="box"><h3>SOC Analyst</h3><p>Monitors networks and alerts, detects attacks and escalates incidents. A common first job.</p></div>
+<div class="box"><h3>Penetration Tester</h3><p>Legally tests systems to find weaknesses before criminals do, then reports fixes.</p></div>
+<div class="box"><h3>Network Security Engineer</h3><p>Designs and protects networks with firewalls, VPNs and monitoring.</p></div>
+<div class="box"><h3>Digital Forensics Investigator</h3><p>Recovers and analyses digital evidence after fraud, hacking or data theft.</p></div>
+<div class="box"><h3>Incident Responder</h3><p>Leads the response when a breach happens: contain, remove, recover.</p></div>
+<div class="box"><h3>Security Auditor / GRC Analyst</h3><p>Checks that organisations follow security policies, laws and standards.</p></div>
+<div class="box"><h3>Cloud Security Engineer</h3><p>Secures systems on cloud platforms like AWS, Azure and Google Cloud.</p></div>
+<div class="box"><h3>Fraud and Mobile Money Security Analyst</h3><p>Detects scams and account takeover in banking and mobile money services.</p></div>
+<div class="box"><h3>Security Awareness Trainer</h3><p>Teaches staff and the public to spot phishing and stay safe online.</p></div>
+<div class="box"><h3>Security Consultant or Freelancer</h3><p>Advises businesses, runs your own company, or does bug bounty work.</p></div>
+</div>
+<h3 style="margin:28px 0 8px;font-size:22px">Certifications to aim for</h3>
+<ul><li>ISC2 Certified in Cybersecurity (CC), entry level</li><li>CompTIA Security+ and Network+</li><li>Cisco CCNA</li><li>Certified Ethical Hacker (CEH) and eJPT</li><li>Google Cybersecurity Certificate (online)</li></ul>
+<div class="warn"><b>Practise legally:</b> use TryHackMe, Hack The Box, OverTheWire and your own home lab. Check current prices and requirements for each certification before you plan. Many offer free learning paths. Also ask your lecturers and local ICT bodies about internships, as organisations like banks and telecoms often hire interns.</div>
+</div></section>
+
+<section id="health"><div class="wrap">
+<h2>Health care for students</h2>
+<p class="lead">Your brain is part of your body. Look after it and your grades will follow.</p>
+<div class="grid">
+<div class="box hl"><h3>Sleep</h3><ul><li>Aim for 7 to 9 hours.</li><li>Sleep and wake at similar times daily.</li><li>No screens for 30 to 60 minutes before bed.</li><li>Sleep helps memory. A full night often beats a late-night cram.</li></ul></div>
+<div class="box"><h3>Food</h3><ul><li>Do not skip breakfast.</li><li>Eat proteins (beans, eggs, fish, meat), whole grains, vegetables and fruit.</li><li>Limit sugary drinks and heavy junk food.</li><li>Cook in batches or share meals with friends to save money.</li></ul></div>
+<div class="box"><h3>Water</h3><ul><li>Drink water through the day, not just when thirsty.</li><li>Carry a bottle to class.</li><li>Be careful with energy drinks and too much coffee; too much caffeine harms sleep and anxiety.</li></ul></div>
+<div class="box"><h3>Exercise</h3><ul><li>30 minutes of walking, jogging, football, skipping or home workouts most days.</li><li>Stand and stretch every hour of study.</li><li>Exercise improves focus and mood.</li></ul></div>
+<div class="box"><h3>Hygiene and prevention</h3><ul><li>Wash hands often. Keep your room and bedding clean.</li><li>Sleep under a treated net where malaria is common.</li><li>Drink only safe water.</li><li>Learn where the campus clinic is and register early.</li></ul></div>
+<div class="box"><h3>Eyes, back and posture</h3><ul><li>Study in good light.</li><li>Every 20 minutes, look at something 20 feet away for 20 seconds.</li><li>Sit upright with your back supported.</li></ul></div>
+<div class="box"><h3>Safe choices</h3><ul><li>Avoid alcohol, tobacco and drugs. They damage focus, money and health.</li><li>Practise safe relationships and get regular health checks.</li><li>Never self-prescribe or share medication.</li></ul></div>
+</div>
+<div class="warn"><b>When to see a doctor:</b> fever that lasts more than 2 days, constant headaches, chest pain, blood in stool or urine, sudden weight loss, or anything that worries you. This website gives general advice only and is not medical care.</div>
+</div></section>
+
+<section id="mind"><div class="wrap">
+<h2>Mental wellbeing and stress</h2>
+<p class="lead">Feeling pressure in school is normal. Feeling stuck for weeks is a signal to get support.</p>
+<div class="grid">
+<div class="box"><h3>Manage stress</h3><ul><li>Break big tasks into small ones.</li><li>Do a 5-minute breathing exercise: in for 4, hold 4, out for 6.</li><li>Take one real day off every week.</li><li>Write down worries, then pick one action for each.</li></ul></div>
+<div class="box"><h3>Beat procrastination</h3><ul><li>Start for just 5 minutes.</li><li>Remove phone distractions and use "Do Not Disturb".</li><li>Do your hardest task first, when your energy is highest.</li><li>Reward yourself after each completed block.</li></ul></div>
+<div class="box"><h3>Handle exam anxiety</h3><ul><li>Prepare early; panic grows from lack of preparation.</li><li>Eat and sleep well before the exam.</li><li>Read all questions first, then start with the one you know best.</li><li>If your mind goes blank, breathe and move on, then return later.</li></ul></div>
+<div class="box"><h3>Ask for help</h3><ul><li>Talk to a trusted friend, family member, counsellor or chaplain.</li><li>Persistent sadness, hopelessness, or thoughts of self-harm need urgent support. Contact a counsellor, doctor or local emergency line right away.</li></ul></div>
+</div>
+</div></section>
+
+<section id="life"><div class="wrap">
+<h2>Money, relationships and career</h2>
+<div class="grid">
+<div class="box"><h3>Money</h3><ul><li>Write a monthly budget: fees, food, transport, data, and emergencies.</li><li>Save a small amount weekly, even if it is little.</li><li>Avoid loans and get-rich-quick schemes.</li><li>Look for scholarships, bursaries and part-time work that fit your timetable.</li></ul></div>
+<div class="box"><h3>People</h3><ul><li>Choose friends who push you forward.</li><li>Be respectful to lecturers and staff.</li><li>Say no to anything that threatens your future.</li><li>Stay in touch with family; they are your support system.</li></ul></div>
+<div class="box"><h3>Career</h3><ul><li>Build a CV in Year 2 and update it each semester.</li><li>Create a LinkedIn profile.</li><li>Keep a project portfolio.</li><li>Practise interviews with friends.</li><li>Think about further studies after your HND.</li></ul></div>
+<div class="box"><h3>Digital habits</h3><ul><li>Use social media on purpose, not by reflex.</li><li>Turn off non-essential notifications.</li><li>Use AI and the internet to learn, but do your own work and think for yourself.</li></ul></div>
+</div>
+</div></section>
+
+<section id="save"><div class="wrap">
+<h2>How to save money as a student</h2>
+<p class="lead">Small amounts saved regularly beat big amounts saved once in a while. Amounts below are in FCFA, so change them to match your own situation.</p>
+<div class="grid">
+<div class="box hl"><h3>Start with a budget</h3><ul>
+<li>List your income: family support, scholarship, part-time work.</li>
+<li>List fixed costs first: fees, rent, transport, data.</li>
+<li>Then food and personal needs. What is left is for savings and fun.</li>
+<li>Rule of thumb: save at least 10% of whatever comes in, the day it comes in.</li>
+</ul></div>
+<div class="box"><h3>Pay yourself first</h3><ul>
+<li>Move your savings out of your spending money immediately.</li>
+<li>Keep savings in a separate place: a savings account, a savings group, or a separate mobile money wallet that you don't touch.</li>
+<li>Save even a small amount every week, like 500 or 1,000 FCFA.</li>
+</ul></div>
+<div class="box"><h3>Cut costs without suffering</h3><ul>
+<li>Cook or share meals instead of buying daily.</li>
+<li>Walk or share transport when it is safe.</li>
+<li>Buy data bundles that match your real use, and use campus Wi-Fi.</li>
+<li>Buy used textbooks or share them, and borrow from the library.</li>
+<li>Don't buy things to impress people.</li>
+</ul></div>
+<div class="box"><h3>Safe places to save</h3><ul>
+<li>A bank or microfinance savings account that is registered and approved.</li>
+<li>A trusted savings group (njangi or tontine) with clear rules, written records and people you know well.</li>
+<li>Mobile money for short-term storage, not as your main long-term savings.</li>
+<li>Avoid schemes that promise big returns fast. If it sounds too good to be true, it is probably a scam.</li>
+</ul></div>
+<div class="box"><h3>Three savings goals</h3><ul>
+<li><b>Emergency fund:</b> aim for 1 to 3 months of basic expenses.</li>
+<li><b>School goal:</b> final-year project costs, books, a laptop.</li>
+<li><b>Future goal:</b> starting capital for a job search, a certification exam or a small business.</li>
+</ul></div>
+<div class="box"><h3>Earn extra, legally</h3><ul>
+<li>Offer tutoring, IT support, phone repair or basic web design.</li>
+<li>Do freelance work online as your skills grow.</li>
+<li>Keep work hours small so they don't hurt your studies.</li>
+<li>Don't borrow money for non-essential things.</li>
+</ul></div>
+</div>
+<div class="box" style="margin-top:16px"><h3>Savings calculator</h3>
+<p style="margin:4px 0 10px;color:var(--mute)">How much could you have by the end of your 3 years (156 weeks)?</p>
+<label>Amount saved per week (FCFA): <input id="wk" type="number" min="0" value="1000" style="font:inherit;padding:8px;width:9em;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)"></label>
+<p id="sv" style="font-size:20px;font-weight:600;margin:12px 0 0"></p>
+</div>
+</div></section>
+
+<section id="plan"><div class="wrap">
+<h2>How to build a plan for your life</h2>
+<p class="lead">A plan doesn't mean you know everything. It means you know your direction, take the next step, and adjust as you learn.</p>
+<div class="grid">
+<div class="box hl"><h3>Step 1: Know yourself</h3><ul>
+<li>Write down your values: faith, family, honesty, hard work.</li>
+<li>List your strengths, weaknesses and what you enjoy.</li>
+<li>Ask: what problem do I want to help solve?</li>
+</ul></div>
+<div class="box"><h3>Step 2: Picture your future</h3><ul>
+<li>Write a short sentence about the person you want to be in 10 years.</li>
+<li>Think about work, money, family, health, faith and community.</li>
+<li>Pray and talk to people you respect.</li>
+</ul></div>
+<div class="box"><h3>Step 3: Set goals by time</h3><ul>
+<li><b>Now to 1 year:</b> pass every Level 1 course, learn Linux and Python.</li>
+<li><b>By year 3:</b> finish HND with strong results, complete an internship, earn one certification.</li>
+<li><b>3 to 5 years:</b> get a job or start a business in cyber security.</li>
+<li><b>10 years:</b> be a senior specialist, leader or business owner, and help others.</li>
+</ul></div>
+<div class="box"><h3>Step 4: Make goals SMART</h3><ul>
+<li>Specific: "Pass CompTIA Security+" not "do well".</li>
+<li>Measurable: know how you will check progress.</li>
+<li>Achievable and relevant to your direction.</li>
+<li>Time-bound: set a date.</li>
+</ul></div>
+<div class="box"><h3>Step 5: Break into actions</h3><ul>
+<li>Turn each goal into small steps for this month and this week.</li>
+<li>Put the steps on your timetable.</li>
+<li>Do one important thing every day.</li>
+</ul></div>
+<div class="box"><h3>Step 6: Review and adjust</h3><ul>
+<li>Weekly (Sunday): what worked, what didn't, what's next?</li>
+<li>Each semester: update your goals after your results.</li>
+<li>Each year: rewrite your plan. It's fine to change course.</li>
+</ul></div>
+</div>
+<h3 style="font-size:22px;margin:28px 0 8px">Balance the areas of your life</h3>
+<p class="lead" style="margin-bottom:12px">Rate each area from 1 to 10. Then pick the lowest two and set one small goal for each this month.</p>
+<div class="grid">
+<div class="box"><b>Studies</b><br>Grades, skills, projects</div>
+<div class="box"><b>Faith and character</b><br>Prayer, honesty, discipline</div>
+<div class="box"><b>Health</b><br>Sleep, food, exercise, mind</div>
+<div class="box"><b>Money</b><br>Budget, savings, income</div>
+<div class="box"><b>Relationships</b><br>Family, friends, mentors</div>
+<div class="box"><b>Career</b><br>CV, network, experience</div>
+</div>
+<div class="warn"><b>Find mentors:</b> get a lecturer, a professional in cyber security, and an older person you respect. Meet them a few times a year, ask for advice and listen. Share your plan with someone you trust so they can help you stay on track.</div>
+</div></section>
+
+<section id="mature"><div class="wrap">
+<h2>Behaving with maturity and respect</h2>
+<p class="lead">How you carry yourself in front of elders, lecturers and employers shapes how far people will open doors for you. Customs vary between families, regions and cultures in Cameroon, so use these as a base and follow local tradition.</p>
+<div class="grid">
+<div class="box hl"><h3>How to speak</h3><ul>
+<li>Greet first, every time: "Good morning, sir/ma", "Bonjour, Monsieur/Madame".</li>
+<li>Use titles (Mr, Mrs, Dr, Pa, Ma, Chief) until you are told otherwise.</li>
+<li>Speak calmly and clearly. Do not shout, interrupt or roll your eyes.</li>
+<li>Say "please", "thank you" and "excuse me" without being reminded.</li>
+<li>Avoid slang, swearing and jokes about people when in formal company.</li>
+<li>If you disagree, do it politely: "Please, may I share another view?"</li>
+</ul></div>
+<div class="box"><h3>How to listen</h3><ul>
+<li>Give full attention. Put your phone away.</li>
+<li>Look at the person, nod, and let them finish before you reply.</li>
+<li>Ask good questions. Elders often carry experience that books don't have.</li>
+<li>If they correct you, accept it humbly, even if you feel it is unfair.</li>
+</ul></div>
+<div class="box"><h3>How to look</h3><ul>
+<li>Dress clean, neat and modest, and suit the occasion. Church, interviews, school and family events each need different outfits.</li>
+<li>Iron your clothes, polish your shoes, keep nails and hair tidy.</li>
+<li>Stay fresh: bath, deodorant, brushed teeth.</li>
+<li>Stand or sit upright. Do not slouch or put your feet on furniture.</li>
+</ul></div>
+<div class="box"><h3>Respect in action</h3><ul>
+<li>Stand to greet an elder who enters the room, and offer your seat.</li>
+<li>Offer help with bags, doors, steps and errands before being asked.</li>
+<li>Use your right hand, or both hands, to give or receive things, as is the custom in many communities.</li>
+<li>Do not start eating or sit before elders do. Wait to be invited.</li>
+<li>Visit relatives and neighbours and check on them when they're ill.</li>
+</ul></div>
+<div class="box"><h3>Character of a mature person</h3><ul>
+<li><b>Keep your word:</b> be on time and do what you promised.</li>
+<li><b>Take responsibility:</b> say "I made a mistake" instead of blaming others.</li>
+<li><b>Control your temper:</b> pause before reacting.</li>
+<li><b>Stay humble:</b> don't boast about money, grades or connections.</li>
+<li><b>Be honest:</b> never cheat, lie or copy to look good.</li>
+<li><b>Keep secrets:</b> don't gossip or share private matters.</li>
+</ul></div>
+<div class="box"><h3>Online maturity</h3><ul>
+<li>Think before posting: lecturers, employers and elders may see it.</li>
+<li>Use a professional profile photo and a simple, clean username.</li>
+<li>Write messages with greetings and correct spelling. Avoid texting elders with only "hi".</li>
+<li>Don't fight or insult people in comments.</li>
+</ul></div>
+</div>
+<div class="warn"><b>Respect goes both ways, but it should never cost your safety.</b> Being polite doesn't mean you must obey someone who asks you to do something wrong, illegal or unsafe. If anyone, of any age, makes you uncomfortable or pressures you, you can leave politely and tell a trusted adult or counsellor.</div>
+</div></section>
+
+<section id="faith"><div class="wrap">
+<h2>Prayer timetable and Bible verses</h2>
+<p class="lead">A faith timetable to sit beside your study timetable. Adjust the times to your lectures and your church or family tradition. The verses below are short summaries in plain words, with the reference for each. Open your own Good News Bible to read the exact wording and the full passage.</p>
+<div class="box hl" style="margin-bottom:20px"><h3>Verse for today</h3><p id="vod" style="font-size:18px;margin:6px 0 0"></p></div>
+<h3 style="font-size:22px;margin:0 0 10px">Daily prayer rhythm</h3>
+<div class="table"><table>
+<tr><th>Time</th><th>What to do</th><th>Bible reference</th></tr>
+<tr><td>5:30 to 6:00 am</td><td>Wake, thank God, pray over the day</td><td>Psalm 119:105: God's word lights up my way and guides my steps.</td></tr>
+<tr><td>6:00 to 6:15 am</td><td>Read one short Bible passage and write one line you learned</td><td>Joshua 1:9: Be strong and brave, and do not be afraid, because God is with you.</td></tr>
+<tr><td>7:30 am</td><td>One-minute prayer before class or study</td><td>James 1:5: If you need wisdom, ask God, who gives generously.</td></tr>
+<tr><td>12:30 pm</td><td>Midday pause: breathe, pray, give thanks, eat</td><td>1 Peter 5:7: Give all your worries to God, because he cares for you.</td></tr>
+<tr><td>5:30 pm</td><td>Quiet prayer after study, ask for strength to continue</td><td>Isaiah 41:10: Do not fear; God is with you and will give you strength.</td></tr>
+<tr><td>9:30 pm</td><td>Night prayer: thank God for three things, plan tomorrow, rest</td><td>Philippians 4:6-7: Do not worry; pray about everything with thanks, and God's peace will guard you.</td></tr>
+</table></div>
+
+<h3 style="font-size:22px;margin:30px 0 10px">Weekly faith timetable</h3>
+<div class="table"><table>
+<tr><th>Day</th><th>Prayer focus</th><th>Key reference</th></tr>
+<tr><td>Monday</td><td>Start the week; ask for wisdom for every course</td><td>Proverbs 3:5-6: Trust God completely, not only your own understanding, and he will guide you.</td></tr>
+<tr><td>Tuesday</td><td>Discipline and focus; pray against laziness and distraction</td><td>Colossians 3:23: Work wholeheartedly, as if you are working for the Lord.</td></tr>
+<tr><td>Wednesday</td><td>Midweek service or fellowship; pray for lecturers and classmates</td><td>Psalm 46:1: God is our safe place and strength, always ready to help in trouble.</td></tr>
+<tr><td>Thursday</td><td>Courage for tests, labs and assignments</td><td>Philippians 4:13: I can face anything through Christ who gives me strength.</td></tr>
+<tr><td>Friday</td><td>Thanksgiving for the week; confess mistakes and start fresh</td><td>Proverbs 16:3: Put your plans in God's hands and they will succeed.</td></tr>
+<tr><td>Saturday</td><td>Family, friends, and rest; pray for your parents and sponsors</td><td>Matthew 6:33: Put God first and the things you need will follow.</td></tr>
+<tr><td>Sunday</td><td>Church service; long prayer for your future and goals</td><td>Jeremiah 29:11: God has plans for your good and a hopeful future for you.</td></tr>
+</table></div>
+
+<h3 style="font-size:22px;margin:30px 0 10px">Verses for different moments</h3>
+<details><summary>When you feel tired or want to quit</summary><div>Galatians 6:9: Do not grow tired of doing good; at the right time you will reap if you do not give up.<br>Isaiah 41:10: God promises to strengthen and help you.</div></details>
+<details><summary>Before exams and when you are anxious</summary><div>Philippians 4:6: Do not worry. Pray about everything, with thanks, and tell God what you need.<br>1 Peter 5:7: Give all your worries to God, because he cares for you.</div></details>
+<details><summary>When you need wisdom and understanding</summary><div>Proverbs 4:7: Wisdom matters most, so get wisdom, and understanding with it.<br>James 1:5: Ask God, who gives to everyone generously.</div></details>
+<details><summary>When you feel fear or loneliness</summary><div>Joshua 1:9: God is with you wherever you go.<br>Psalm 46:1: God is always ready to help in trouble.</div></details>
+<details><summary>When you are tempted to cheat or take shortcuts</summary><div>Proverbs 16:3: Put your plans in God's hands and they will succeed.<br>Colossians 3:23: Work wholeheartedly for the Lord, not only to impress people.</div></details>
+<div class="warn"><b>Reading tip:</b> look up each reference in your Good News Bible. Write the verse in your own words in your notebook.</div><div class="warn"><b>Fasting note:</b></b> if you choose to fast, keep it short and drink water. Do not fast if you are ill, on medication, or during heavy exams unless a doctor or church leader advises it. Prayer works together with preparation: pray, then study, then trust God with the result.</div>
+</div></section>
+
+<section id="tools"><div class="wrap">
+<h2>Tools</h2>
+<p class="lead">A focus timer and a daily checklist. Both work right here.</p>
+<div class="timer">
+<output id="clock" aria-live="off">25:00</output>
+<div>
+<button class="btn" id="start">Start</button>
+<button class="btn alt" id="reset">Reset</button>
+<div style="margin-top:10px"><button class="ghost" id="m25" style="color:inherit;border-color:rgba(255,255,255,.5)">25 min focus</button> <button class="ghost" id="m5" style="color:inherit;border-color:rgba(255,255,255,.5)">5 min rest</button></div>
+</div>
+</div>
+<div class="box check" style="margin-top:16px">
+<h3>Today's wellbeing checklist</h3>
+<label><input type="checkbox"> Slept 7 hours or more</label>
+<label><input type="checkbox"> Ate breakfast</label>
+<label><input type="checkbox"> Drank enough water</label>
+<label><input type="checkbox"> Moved my body for 30 minutes</label>
+<label><input type="checkbox"> Did 2 focused study blocks</label>
+<label><input type="checkbox"> Reviewed today's notes</label>
+<label><input type="checkbox"> Spoke to someone I trust</label>
+<label><input type="checkbox"> Planned tomorrow</label>
+</div>
+</div></section>
+
+<footer><div class="wrap">Created for Tiapo Evans. General guidance for students; not a substitute for professional medical, mental health or academic advice.</div></footer>
+
+<script>
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{
+document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));
+['y1','y2','y3'].forEach(id=>document.getElementById(id).hidden=id!==b.dataset.p)}));
+let secs=1500,len=1500,t=null;const clock=document.getElementById('clock'),st=document.getElementById('start');
+function draw(){clock.textContent=String(Math.floor(secs/60)).padStart(2,'0')+':'+String(secs%60).padStart(2,'0')}
+function stop(){clearInterval(t);t=null;st.textContent='Start'}
+st.onclick=()=>{if(t){stop();return}st.textContent='Pause';t=setInterval(()=>{secs--;draw();if(secs<=0){stop();secs=0;draw();clock.textContent='Done!'}},1000)};
+document.getElementById('reset').onclick=()=>{stop();secs=len;draw()};
+function setLen(m){stop();len=secs=m*60;draw()}
+document.getElementById('m25').onclick=()=>setLen(25);document.getElementById('m5').onclick=()=>setLen(5);
+document.getElementById('theme').onclick=()=>{const r=document.documentElement,d=matchMedia('(prefers-color-scheme:dark)').matches;
+const cur=r.dataset.theme||(d?'dark':'light');r.dataset.theme=cur==='dark'?'light':'dark'};
+const V=["Proverbs 3:5-6: Trust God completely, not only your own understanding, and he will guide you.", "Colossians 3:23: Work wholeheartedly, as if you are working for the Lord.", "Psalm 46:1: God is our safe place and strength, always ready to help in trouble.", "Philippians 4:13: I can face anything through Christ who gives me strength.", "Proverbs 16:3: Put your plans in God's hands and they will succeed.", "Matthew 6:33: Put God first and the things you need will follow.", "Jeremiah 29:11: God has plans for your good and a hopeful future for you."];document.getElementById('vod').textContent=V[(new Date().getDay()+6)%7];
+const wk=document.getElementById('wk'),sv=document.getElementById('sv');
+function calc(){const n=Math.max(0,+wk.value||0)*156;sv.textContent='About '+n.toLocaleString('en-US')+' FCFA in 3 years'}
+wk.addEventListener('input',calc);calc();
+</script>
+</body>
+</html>
